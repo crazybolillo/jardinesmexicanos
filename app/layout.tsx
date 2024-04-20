@@ -1,26 +1,14 @@
+import { Footer, FooterCopyright, Navbar, NavbarBrand, ThemeModeScript } from "flowbite-react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import {
-  ThemeModeScript,
-  Footer,
-  FooterCopyright,
-  FooterIcon,
-  Navbar,
-  NavbarBrand,
-  NavbarToggle,
-  NavbarCollapse,
-  NavbarLink,
-} from "flowbite-react";
 
 import "./globals.css";
-import { BsGithub } from "react-icons/bs";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Jardines Mexicanos",
-  description:
-    "Plantas nativas Mexicanas para promover la flora y fauna local, cuidando el medio ambiente.",
+  description: "Plantas nativas Mexicanas para promover la flora y fauna local, cuidando el medio ambiente.",
 };
 
 export default function RootLayout({
