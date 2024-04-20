@@ -1,8 +1,18 @@
-import { Footer, FooterCopyright, FooterIcon, Navbar, NavbarBrand, ThemeModeScript } from "flowbite-react";
+import {
+  Footer,
+  FooterCopyright,
+  FooterIcon,
+  Navbar,
+  NavbarBrand,
+  NavbarCollapse,
+  NavbarToggle,
+  ThemeModeScript,
+} from "flowbite-react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-
 import { BsYoutube } from "react-icons/bs";
+
+import Link from "next/link";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,8 +37,12 @@ export default function RootLayout({
           <NavbarBrand href="/">
             <span className="self-center text-xl">Jardines Mexicanos</span>
           </NavbarBrand>
+          <NavbarToggle />
+          <NavbarCollapse>
+            <Link href="/como-empezar">Como empezar</Link>
+          </NavbarCollapse>
         </Navbar>
-        <div className="h-full mx-auto">{children}</div>
+        {children}
         <Footer className="flex p-4 sm:px-6 rounded-none dark:bg-gray-900">
           <FooterCopyright href="#" by="Jardines Mexicanos" year={2024} />
           <div className="ms-auto">
