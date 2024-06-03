@@ -40,6 +40,7 @@ export default function RootLayout({
           <NavbarToggle />
           <NavbarCollapse>
             <Link href="/como-empezar">Como empezar</Link>
+            <Link href="/nosotros">Nosotros</Link>
           </NavbarCollapse>
         </Navbar>
         {children}
