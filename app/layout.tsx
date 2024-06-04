@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import {
   Footer,
   FooterCopyright,
@@ -44,6 +45,7 @@ export default function RootLayout({
           </NavbarCollapse>
         </Navbar>
         {children}
+        <Analytics />
         <Footer className="flex p-4 sm:px-6 rounded-none dark:bg-gray-900">
           <FooterCopyright href="#" by="Jardines Mexicanos" year={2024} />
           <div className="ms-auto">
