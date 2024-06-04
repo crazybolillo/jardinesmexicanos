@@ -29,11 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="h-screen" lang="en">
       <head>
         <ThemeModeScript />
       </head>
-      <body className={inter.className}>
+      <body className={"min-h-screen flex flex-col " + inter.className}>
         <Navbar className="p-4 bg-transparent dark:bg-transparent border-b">
           <NavbarBrand href="/">
             <span className="self-center text-xl">Jardines Mexicanos</span>
@@ -46,7 +46,7 @@ export default function RootLayout({
         </Navbar>
         {children}
         <Analytics />
-        <Footer className="flex p-4 sm:px-6 rounded-none dark:bg-gray-900">
+        <Footer className="flex p-4 mt-auto sm:px-6 rounded-none dark:bg-gray-900">
           <FooterCopyright href="#" by="Jardines Mexicanos" year={2024} />
           <div className="ms-auto">
             <FooterIcon href="https://www.youtube.com/@jardinesmexicanos" icon={BsYoutube} />
